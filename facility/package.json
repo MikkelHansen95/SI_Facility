@@ -4,7 +4,7 @@
   "description": "",
   "main": "facilityServer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node facilityServer.js"
   },
   "keywords": [],
@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "node-fetch": "^2.6.0"
   }
 }
