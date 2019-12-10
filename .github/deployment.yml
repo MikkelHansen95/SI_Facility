@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: facility-deployment
+  labels:
+    run: facility
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: facility
+  template:
+    metadata:
+      labels:
+        run: facility
+    spec:
+      containers:
+      - name: facility
+        image: pravien/facility
+        ports:
+        - containerPort: 3002
