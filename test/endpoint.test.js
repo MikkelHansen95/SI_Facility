@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 test('get all facilities', async () => {
 
-    return fetch('http://localhost:3002/facility/')
+    return fetch('http://localhost:3002/')
         .then(res => {
             return res.json()
         })
@@ -16,7 +16,7 @@ test('get all facilities', async () => {
 
 test('check if specific facility exists with its capacity', async () => {
 
-    return fetch('http://localhost:3002/facility/100')
+    return fetch('http://localhost:3002/100')
         .then(res => {
             return res.json()
         })

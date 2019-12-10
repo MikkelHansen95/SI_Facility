@@ -24,10 +24,10 @@ function createFacilities() {
 
 var facilities = createFacilities()
 
-app.get('/facility/', (req, res) => {
+app.get('/', (req, res) => {
     res.send(facilities)})
 
-app.get('/facility/:eventId', function(req, res) {
+app.get('/:eventId', function(req, res) {
     var returnList = []
     for(var i = 0; i< facilities.length; i++) {
         var bool = facilities[i].eventExists(req.params.eventId)
@@ -38,7 +38,7 @@ app.get('/facility/:eventId', function(req, res) {
     res.send(returnList)
 })
 
-app.post('/facility/:facilityId', function(req, res) {
+app.post('/:facilityId', function(req, res) {
     console.log(req.body);
     for(var i = 0; i<facilities.length; i++) {
         if(facilities[i].facilityId == req.params.facilityId) {
