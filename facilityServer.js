@@ -51,10 +51,10 @@ app.post('/:facilityId', function(req, res) {
 
 app.post('/facility', function(req, res) {
     var facilityId = Math.random()
-    if(facilities.find(a => a.facilityid == facilityId)) {
+    if(facilities.find(a => a.facilityId == facilityId)) {
          facilityId = Math.random()
     }
-    var facility = new Facility(Math.random(), req.body.name, req.body.address, req.body.capacity)
+    var facility = new Facility(facilityId, req.body.name, req.body.address, req.body.capacity)
     res.send(facility)
     res.status(200).send({hej: "hejsa"});
 })
